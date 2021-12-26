@@ -1,0 +1,91 @@
+﻿@model AspCoreApp.Models.Eleve
+
+@{
+    ViewData["Title"] = "Create";
+}
+<hr />
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <h5 class="text-center card-header">Ajoutez un nouveau élève !</h5>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form asp-action="Add" asp-controller="Eleves" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="cne" class="control-label">CNE</label>
+                                    <input asp-for="cne" name="cne" class="form-control" />
+                                    <span asp-validation-for="cne" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="prenom" class="control-label">Prenom</label>
+                                    <input asp-for="prenom" class="form-control" />
+                                    <span asp-validation-for="prenom" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="nom" class="control-label">Nom</label>
+                                    <input asp-for="nom" class="form-control" />
+                                    <span asp-validation-for="nom" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="email" class="control-label">E-mail</label>
+                                    <input asp-for="email" class="form-control" />
+                                    <span asp-validation-for="email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="filiere" class="control-label">Filière</label>
+                                    <input asp-for="filiere" class="form-control" />
+                                    <span asp-validation-for="filiere" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="tel" class="control-label">Numéro de Téléphone</label>
+                                    <input asp-for="tel" class="form-control" />
+                                    <span asp-validation-for="tel" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="submit" value="Valider" class="btn btn-success btn-block" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <a asp-action="Index" class="btn btn-info btn-block">Retour</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

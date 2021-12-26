@@ -1,0 +1,66 @@
+﻿@model AspCoreApp.Models.Eleve
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <h6 class="text-center card-header">Détails </h6>
+            <div class="card-body">
+                <div>
+                    <dl class="row">
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.cne).ToUpper()
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.cne)
+                        </dd>
+                        <dt class="col-sm-6">
+                           Prenom
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.prenom)
+                        </dd>
+                        <dt class="col-sm-6">
+                            Nom
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.nom)
+                        </dd>
+                        <dt class="col-sm-6">
+                            E-mail
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.email)
+                        </dd>
+                        <dt class="col-sm-6">
+                            Filière
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.filiere)
+                        </dd>
+                        <dt class="col-sm-6">
+                            Numéro de Téléphone
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.tel)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.ActionLink("Modifier", "Edit", "Eleves", new { cne = Model.cne }, new { @class = "btn btn-warning btn-block" })
+                        </dt>
+                        <dd class="col-sm-6">
+                            <a asp-action="Index" asp-controller="Eleves" class="btn btn-info btn-block">Retour</a>
+                        </dd>
+                    </dl>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
