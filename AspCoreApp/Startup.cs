@@ -26,9 +26,9 @@ namespace AspCoreApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages();
-            services.AddDbContext<EleveContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("EleveContext")));
+             services.AddRazorPages();
+            //services.AddDbContext<EleveContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("EleveContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AspCoreApp.Data;
 using AspCoreApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspCoreApp.Controllers
 {
+    [Authorize]
     public class ElevesController : Controller
     {
         ServiceReference1.ServiceClient client = new ServiceReference1.ServiceClient();
